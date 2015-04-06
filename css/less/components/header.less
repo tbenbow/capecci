@@ -1,0 +1,30 @@
+/*
+
+HEADER
+--------------------------------------------------
+
+*/
+
+header {
+	background-color: rgba(107,94,136,.9);
+	width: 100%;
+	margin-top: 0;
+	height: 7rem;
+	transition: margin-top .3s, background-color .3s;
+}
+
+// VARIATIONS
+header.is-fixed {
+	position: fixed;
+	top: 0;
+	z-index: 8;
+}
+header.is-shy {
+	margin-top: -7rem;
+}
+header.is-transparent {
+	background-color: transparent;
+}
+header.is-opened {
+	margin-top: 0 !important;
+}

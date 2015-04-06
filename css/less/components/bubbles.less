@@ -1,0 +1,101 @@
+/*
+
+BUBBLES
+--------------------------------------------------
+
+*/
+
+.bubbles {
+	.is-4-6;
+	margin: 0 auto;
+	overflow: visible !important;
+
+	.back,
+	.next {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-100%);
+		display: block;
+		width: 3rem;
+		height: 3rem;
+		cursor: pointer;
+	}
+	.back {
+		left: -3rem;
+		background: url(img/arrow_left.svg) center center no-repeat;
+		background-size: contain;
+	}
+	.next {
+		right: -3rem;
+		background: url(img/arrow_right.svg) center center no-repeat;
+		background-size: contain;
+	}
+
+	.bubble {
+		position: relative;
+		background: @primary;
+		margin: 0 1.5rem 2rem 1.5rem;
+		padding: 3rem 3rem 2rem 3rem;
+		border-radius: .5rem;
+		p {
+			color: white;
+			margin: 0;
+			font-size: 1.3rem;
+			font-family: @font-family-sans;
+			font-style: oblique;
+		}
+	}
+	.bubble:after { // Bubble Point
+		content: '';
+		display: block;
+		position: absolute;
+		z-index: -1;
+		bottom: -1rem;
+		left: 8rem;
+		background: @primary;
+		width: 4rem;
+		height: 4rem;
+		transform: rotate(45deg);
+	}
+
+	// Color of bubbles
+	.bubble.is-orange {
+		background: @orange;
+		&:after { // Bubble Point
+			background: @orange;
+		}
+	}
+	.bubble.is-red {
+		background: @red;
+		&:after { // Bubble Point
+			background: @red;
+		}
+	}
+	.bubble.is-green {
+		background: @green;
+		&:after { // Bubble Point
+			background: @green;
+		}
+	}
+}
+
+// MOBILE
+//----------------------------------------------------
+
+@media @mobile {
+	.bubbles {
+		.is-1-1;
+	
+		.back,
+		.next {
+			width: 2rem;
+			height: 2rem;
+		}
+		.back {
+			left: -1.25rem;
+		}
+		.next {
+			right: -1.25rem;
+		}
+	}
+}

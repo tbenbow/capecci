@@ -1,0 +1,14 @@
+{
+  "name": "capecci-website",
+  "description": "The public facing capecci website.",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-autoprefixer": "^2.2.0",
+    "grunt-contrib-less": "^1.0.0",
+    "grunt-contrib-uglify": "^0.8.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-csso": "^0.7.1"
+  }
+}

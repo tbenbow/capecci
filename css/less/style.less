@@ -1,0 +1,162 @@
+/*
+
+APOLLO FRAMEWORK BASE
+--------------------------------------------------
+Variables and Imports
+--------------------------------------------------
+
+*/
+
+
+// BREAKPOINTS
+//----------------------------------------------------
+@mobile:    		 	~'only screen and (max-width: 768px)'; // All Mobile Sizes
+@desktop:   			~'only screen and (min-width: 769px)'; // All Desktop Sizes
+@mobile-small:      	~'only screen and (min-width: 320px) and (max-width: 420px)';
+@mobile-large:	 		~'only screen and (min-width: 421px) and (max-width: 768px)';
+@desktop-small:	 		~'only screen and (min-width: 769px) and (max-width: 1024px)';
+@desktop-medium:		~'only screen and (min-width: 1025px) and (max-width: 1400px)';
+@desktop-large:			~'only screen and (min-width: 1550px)';
+
+
+// BASELINE GRID
+//----------------------------------------------------
+@desktop-grid-size: 15px;
+@mobile-grid-size: 12px;
+
+
+// WIDTHS
+//----------------------------------------------------
+@max-width-desktop:		960px;
+@min-width-desktop:		960px;
+@max-width-mobile:		100%;
+@min-width-mobile:		100%;
+
+
+// COLORS
+//----------------------------------------------------
+@primary:         		#6B5E88; // Capecci Purple
+@secondary:				#E17952; // Orange
+@tertiary:				#C05565; // Red
+@orange:                #E17952; // Orange
+@red:                   #C05565; // Red
+@green:                 #6c9d71; // Green
+
+@white:                 white;
+@black:                 black;
+@gray-base:             black;
+@gray-dark:				lighten(@gray-base, 40%);
+@gray:					lighten(@gray-base, 80%);
+@gray-light:			lighten(@gray-base, 90%);
+
+@body-bg:               white;
+@body-text-color:       @gray-dark;
+@link-color:            @primary;
+@link-hover-color:      darken(@link-color, 15%);
+
+
+// FONT FAMILIES
+//----------------------------------------------------
+
+@font-face {
+    font-family: 'avenir';
+    src: url("fonts/avenir_next.woff") format("woff");
+}
+@font-face {
+    font-family: 'avenir';
+    src: url("fonts/avenir_next_italic.woff") format("woff");
+    font-style: oblique;
+}
+@font-face {
+    font-family: "avenir-demi";
+    src: url("fonts/avenir_next_demi.woff") format("woff");
+}
+@font-face {
+    font-family: "avenir-demi-italic";
+    src: url("fonts/avenir_next_demi_italic.woff") format("woff");
+    font-style: oblique;
+}
+@font-face {
+    font-family: "avenir-thin";
+    src: url("fonts/avenir_next_thin.svg") format("svg"),
+         url("fonts/avenir_next_ultralight.woff") format("woff");
+    font-style: normal;
+}
+
+@font-family-sans:				'avenir', Helvetica, Arial, sans-serif;
+@font-family-sans-italic:		'avenir-italic', Helvetica, Arial, sans-serif;
+@font-family-sans-bold:			'avenir-demi', Helvetica, Arial, sans-serif;
+@font-family-sans-bold-italic:	'avenir-demi-italic', Helvetica, Arial, sans-serif;
+@font-family-sans-light:		'avenir-thin', Helvetica, Arial, sans-serif;
+@font-family-serif:				Georgia, 'Times New Roman', Times, serif;
+@font-family-mono:				Menlo, Monaco, Consolas, 'Courier New', monospace;
+@font-family-base:				@font-family-sans;
+
+@font-family-h1:				@font-family-sans-light;
+@font-family-h2:				@font-family-sans-light;
+@font-family-h3:				@font-family-sans-light;
+@font-family-h4:				@font-family-sans-bold;
+@font-family-h5:				@font-family-sans-bold;
+@font-family-h6:				@font-family-sans-bold;
+@font-family-body: 				@font-family-sans;
+@font-family-lead:				@font-family-sans-light;
+@font-family-small:				@font-family-sans;
+@font-family-nav: 				@font-family-sans-bold;
+
+
+// FONT SIZES
+//----------------------------------------------------
+@font-size-h1:			2.2rem;
+@font-size-h2:			1.8rem;
+@font-size-h3:			1.5rem;
+@font-size-h4:			1.3rem;
+@font-size-h5:			1.3rem;
+@font-size-h6:			1.3rem;
+@font-size-body: 		1.1rem;
+@font-size-lead: 		1.4rem;
+@font-size-small:		.8rem;
+
+
+// FONT BASELINE SHIFT
+// Align type to to the baseline
+//----------------------------------------------------
+@baseline-shift-h1:		-.2rem;
+@baseline-shift-h2:		.2rem;
+@baseline-shift-h3:		.5rem;
+@baseline-shift-h4:		-.5rem;
+@baseline-shift-h5:		-.4rem;
+@baseline-shift-h6:		-.3rem;
+@baseline-shift-p:		-.3rem;
+@baseline-shift-li:		.5rem;
+@baseline-shift-sup:	.2rem;
+
+
+// IMPORT CORE
+//----------------------------------------------------
+@import '/core/defaults.less';
+@import '/core/utilities.less';
+@import '/core/structure.less';
+@import '/core/type.less';
+
+
+// IMPORT COMPONENTS
+//----------------------------------------------------
+@import '/components/header.less';
+@import '/components/navbar.less';
+@import '/components/ballicons.less';
+@import '/components/bubbles.less';
+@import '/components/services.less';
+@import '/components/portfolio.less';
+@import '/components/forms.less';
+@import '/components/social.less';
+
+
+// IMPORT LAYOUTS
+//----------------------------------------------------
+@import '/layouts/home.less';
+
+
+// IMPORT EXTEND
+//----------------------------------------------------
+@import 'extend.less';
+

@@ -1,0 +1,301 @@
+/*
+
+LAYOUT
+--------------------------------------------------
+
+*/
+
+
+#hero {
+	.wrap;
+
+	.hero-image {
+		.wrap-bg-img;		
+	}
+	.content {		
+		.container;
+		text-align: center;
+	}
+	h1 {
+		color: white;
+		margin-top: 16rem;
+		font-size: 2.8rem;
+		line-height: 4rem;
+		letter-spacing: .2rem;
+	}
+	ul {
+		margin-bottom: 16rem;
+		font-size: 0; // Remove Inlind Block Spacing
+	}
+	li {
+		display: inline-block;
+		color: white;
+		padding: 0 1rem;
+		line-height: 1rem;
+		font-size: 1.1rem;
+		list-style: none;
+		border-right: 1px solid white;
+	}
+	li:last-child {
+		border-right: none;
+	}
+}
+#presentation {
+	.row;
+	.container;
+	position: relative;
+	padding-top: 5rem;
+	padding-bottom: 5rem;
+	overflow: hidden; // Contain Floats
+
+	&:after {  // Draw Rule Psudeo element to avoid offset from border
+		content: '';
+		display: block;
+		background: #dddddd;
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		height: 1px;
+	}
+	.content {
+		.col;
+		.is-1-2;
+		margin-top: 6rem;
+	}
+	.aside {
+		.col;
+		.is-1-2;
+		margin-bottom: -2rem;
+	}
+}
+#coaching {
+	.row;
+	.container;
+	position: relative;
+	padding-top: 5rem;
+	padding-bottom: 5rem;
+	overflow: hidden; // Contain Floats
+	text-align: center;
+
+	&:after {  // Draw Rule Psudeo element to avoid offset from border
+		content: '';
+		display: block;
+		background: #dddddd;
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		height: 1px;
+	}
+}
+#marketing {
+	.row;
+	.container;
+	padding-top: 5rem;
+	padding-bottom: 3rem;
+	overflow: hidden; // Contain Floats
+	text-align: center;
+}
+#capecci {
+	.wrap;
+	background: @primary;
+
+	.capecci-bg {
+		position: absolute;
+		left: 50%;
+		z-index: 0;
+		height: 100%;
+		width: @max-width-desktop;
+		transform: translateX(-50%);
+		img {
+			float: right;
+			margin-right: -5rem;
+			height: 100%;
+		}
+	}
+	.content {
+		.container;		
+		padding-top: 5rem;
+		padding-bottom: 5rem;
+	}
+	h1, p {
+		color: white;
+		width: 66%;
+	}
+	p:last-child {
+		margin-bottom: 0;
+	}
+}
+#works {
+	position: relative;
+	padding-top: 5rem;
+	padding-bottom: 5rem;
+	overflow: hidden; // Contain Floats
+	text-align: center;
+
+	&:after {  // Draw Rule Psudeo element to avoid offset from border
+		content: '';
+		display: block;
+		background: #dddddd;
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		height: 1px;
+	}
+}
+#contact {
+	.row;
+	.container;
+	padding-top: 5rem;
+
+	#contact-details {
+		.col;
+		.is-1-2;
+		padding-top: 5rem;
+		text-align: center;
+		h1 {
+			margin-bottom: 2rem;
+		}
+		p {
+			margin: 0 3rem 2rem 3rem;
+		}
+	}
+	#contact-form {
+		.col;
+		.is-1-2;
+
+		.form-box {
+			background: @gray-light;
+			margin-bottom: 2rem;
+			padding: 2rem;
+			text-align: center;
+			border-radius: .5rem;
+		}
+	}
+}
+#credits {
+	.wrap;
+	padding: 0 2rem;
+	text-align: center;
+	p {
+		margin-bottom: 3rem;
+		color: @gray;
+		font-size: .8rem;
+	}
+	a {
+		color: @gray;
+		text-decoration: underline;
+	}
+}
+
+
+// MOBILE
+//----------------------------------------------------
+@media @mobile {
+
+	// WIDTHS
+	#presentation,
+	#coaching,
+	#works,
+	#marketing,
+	#contact {
+		max-width: @max-width-mobile;
+		min-width: @min-width-mobile;
+		box-sizing: border-box;
+	}
+
+	// RULES
+	#presentation,
+	#coaching,
+	#works {
+		&:after {  // Draw Rule Psudeo element to avoid offset from border
+			margin-left: -2rem;
+		}
+	}
+
+	// SECTIONS
+	#header {
+		height: 4rem;
+	}
+	#hero {
+		height: auto;
+		min-height: 34rem;
+		.content {		
+			max-width: @max-width-mobile;
+			min-width: @min-width-mobile;
+			box-sizing: border-box;
+		}
+		h1 {
+			margin-top: 9rem;
+			margin-bottom: 2rem;
+		}
+		ul {
+			padding: 0;
+			margin-bottom: 9rem;
+		}
+		li {
+			display: block;
+			line-height: 2rem;
+			font-size: 1.2rem;
+			border: none;
+		}
+	}
+	#presentation {
+		.content {
+			.is-1-1;
+			margin-top: -2rem;
+			margin-bottom: 1rem;
+			text-align: center;
+		}
+		.aside {
+			.is-1-1;
+		}
+	}
+	#coaching {
+		padding-top: 4rem;
+		padding-bottom: 6rem;
+	}
+	#marketing {
+		padding: 4rem 2rem 2rem 2rem;
+	}
+	#capecci {
+		.capecci-bg {
+			width: @max-width-mobile;
+			img {
+				float: right;
+				margin-right: -5rem;
+			}
+		}
+		.content {
+			padding: 2rem;
+			max-width: @max-width-mobile;
+			min-width: @min-width-mobile;
+			box-sizing: border-box;
+		}
+		h1, p {
+			width: auto;
+		}
+	}
+	#works {
+		padding: 3rem 0 4rem 0;
+	}
+	#contact {
+		padding-top: 3rem;
+		#contact-details {
+			.is-1-1;
+			padding: 0;
+			p {
+				margin-left: 0;
+				margin-right: 0;
+			}
+		}
+		#contact-form {
+			.is-1-1;
+			padding: 0;
+			margin: 0;
+			
+			.form-box {
+				margin-bottom: 3rem;
+			}
+		}
+	}
+}

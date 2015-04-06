@@ -1,0 +1,50 @@
+/*
+
+SOCIAL ICONS
+--------------------------------------------------
+
+*/
+
+.social-icons {
+	list-style: none;
+	padding: 0;
+
+	li {
+		display: inline-block;
+		margin: 0 .5rem;
+		width: 3rem;
+		height: 3rem;
+		font-size: 0; // remove inline-block spacing
+		text-indent: -999rem;
+	}
+	a {
+		display: block;
+		background: red;
+		width: 100%;
+		height: 100%;
+		border-radius: .5rem;
+		transition: background-color .3s;	
+	}
+	a.twitter {
+		background: @primary url(img/twitter.svg) no-repeat center center;
+		background-size: 2rem;
+		&:hover {
+			background-color: #36aade;
+		} 
+	}
+	a.linkedin {
+		background: @primary url(img/linkedin.svg) no-repeat center center;
+		background-size: 2rem;
+		&:hover {
+			background-color: #137cb7;
+		} 
+		
+	}
+	a.google {
+		background: @primary url(img/google.svg) no-repeat center center;
+		background-size: 2rem;
+		&:hover {
+			background-color: #dd4b39;
+		} 
+	}
+}

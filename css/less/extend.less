@@ -1,0 +1,39 @@
+/*
+
+EXTEND
+--------------------------------------------------
+Used to extend the core or individual modules
+
+*/
+
+
+#stuff {
+	.row;
+	border: 1px solid red;
+	height: 10rem;
+	.image{
+		.col;
+		.is-1-2;
+		height: 10rem;
+		border: 1px solid red;
+	}
+	.content {
+		.col;
+		.is-1-2;
+		height: 10rem;
+		border: 1px solid red;
+	}
+
+}
+@media @mobile {
+	#stuff {
+
+	.image{
+		.is-1-1;
+	}
+	.content {
+		.is-1-1;
+	}
+
+}
+}
