@@ -11,7 +11,6 @@ portfolio:
     content_html: Since 2001, my team of trainers and I have had the honor of preparing 750+ WomenHeart Champions, the “boots on the ground” army of advocates telling their personal stories and fighting heart disease in women.
     quote: You and your team provided these participants with an amazing amount of confidence and empowerment.
     published: true
-testtest: Hello World
 ---
 <section id="hero">
     <img class="hero-image" src="./img/audience.jpg" />
@@ -27,7 +26,6 @@ testtest: Hello World
 
 <section id="presentation">
     <div class="content">
-        <h1>hey {{ page.testtest }} </h1>
         <h1 class="editable">Presentation and<br />Media Training</h1>
         <p class="editable">Present your best self in informal talks, business presentations, keynote speeches and media interviews.</p>
     </div>
@@ -125,7 +123,7 @@ testtest: Hello World
     <p class="editable">Here’s a sampling of works performed for  fabulous clients and with talented partners.</p>
     
      <p>Hey</p>
-     <p>portfolio {{ site.portfolio | json }}</p>
+     <p>portfolio {{ page.portfolio | json }}</p>
     {% for project in site.portfolio %}
         <p>Hello {{ project | json }}</p>
     {% endfor %}
@@ -142,7 +140,7 @@ testtest: Hello World
             </div>
         </div>
         
-        {% for project in portfolio %}
+        {% for project in page.portfolio %}
         <div class="card">
             <div class="image editable"><img src="{{ project.main_image }}" /></div>
             <div class="content editable">
