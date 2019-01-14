@@ -124,7 +124,7 @@ portfolio:
     <div class="portfolio repeatables"> <!-- Drawn with Slick -->
 
         {% for project in site.portfolio %}
-        {% if project.published == true %}
+        
         <div class="card">
             <div class="image editable"><img src="{{ project.main_image }}" /></div>
             <div class="content editable">
@@ -133,7 +133,7 @@ portfolio:
                 <blockquote>&quot;{{ project.quote }}&quot;</blockquote>
             </div>
         </div>
-        {% endif %}
+        
         {% endfor %}
 
         <a class="back"></a>
