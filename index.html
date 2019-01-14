@@ -123,8 +123,9 @@ portfolio:
     <p class="editable">Here’s a sampling of works performed for  fabulous clients and with talented partners.</p>
     
      <p>Hey</p>
+     <p>portfoolio {{ portfolio | json }}</p>
     {% for project in portfolio %}
-        <p>Hello {{ project | dump }}</p>
+        <p>Hello {{ project | json }}</p>
     {% endfor %}
         
         
