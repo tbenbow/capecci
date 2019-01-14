@@ -123,7 +123,7 @@ portfolio:
     <p class="editable">Here’s a sampling of works performed for  fabulous clients and with talented partners.</p>
     <div class="portfolio repeatables"> <!-- Drawn with Slick -->
 
-        {% for project in portfolio %}
+        {% for project in site.portfolio %}
         {% if project.publisted == true %}
         <div class="card">
             <div class="image editable"><img src="{{ project.main_image }}" /></div>
