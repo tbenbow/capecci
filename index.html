@@ -122,7 +122,16 @@ portfolio:
     <h1 class="editable">Works</h1>
     <p class="editable">Here’s a sampling of works performed for  fabulous clients and with talented partners.</p>
     <div class="portfolio repeatables"> <!-- Drawn with Slick -->
-
+        
+        <div class="card">
+            <div class="image editable"><img src="{{ project.main_image }}" /></div>
+            <div class="content editable">
+                <h3>Test</h3>
+                <p>Content</p>
+                <blockquote>&quot;Quote&quot;</blockquote>
+            </div>
+        </div>
+        
         {% for project in site.portfolio %}
         
         <div class="card">
