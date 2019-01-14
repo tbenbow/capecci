@@ -121,36 +121,19 @@ portfolio:
 <section id="works">
     <h1 class="editable">Works</h1>
     <p class="editable">Here’s a sampling of works performed for  fabulous clients and with talented partners.</p>
-    
-     <p>Hey</p>
-     <p>portfolio {{ page.portfolio | json }}</p>
-    {% for project in site.portfolio %}
-        <p>Hello {{ project | json }}</p>
-    {% endfor %}
-        
-        
     <div class="portfolio repeatables"> <!-- Drawn with Slick -->
-        
-        <div class="card">
-            <div class="image editable"><img src="{{ project.main_image }}" /></div>
-            <div class="content editable">
-                <h3>Test</h3>
-                <p>Content</p>
-                <blockquote>&quot;Quote&quot;</blockquote>
-            </div>
-        </div>
-        
         {% for project in page.portfolio %}
-        <div class="card">
-            <div class="image editable"><img src="{{ project.main_image }}" /></div>
-            <div class="content editable">
-                <h3>{{ project.name }}</h3>
-                <p>{{ project.content_html }}</p>
-                <blockquote>&quot;{{ project.quote }}&quot;</blockquote>
+           {% if project.published == true %}
+            <div class="card">
+                <div class="image editable"><img src="{{ project.main_image }}" /></div>
+                <div class="content editable">
+                    <h3>{{ project.name }}</h3>
+                    <p>{{ project.content_html }}</p>
+                    <blockquote>&quot;{{ project.quote }}&quot;</blockquote>
+                </div>
             </div>
-        </div>
+            {% endif %}
         {% endfor %}
-
         <a class="back"></a>
         <a class="next"></a>
     </div>
