@@ -121,6 +121,13 @@ portfolio:
 <section id="works">
     <h1 class="editable">Works</h1>
     <p class="editable">Here’s a sampling of works performed for  fabulous clients and with talented partners.</p>
+    
+     <p>Hey</p>
+    {% for project in portfolio %}
+        <p>Hello {{ project | dump }}</p>
+    {% endfor %}
+        
+        
     <div class="portfolio repeatables"> <!-- Drawn with Slick -->
         
         <div class="card">
@@ -132,11 +139,7 @@ portfolio:
             </div>
         </div>
         
-        <p>Hey</p>
         {% for project in portfolio %}
-            <p>Hello {{ project | dump }}</p>
-        {% endfor %}
-        
         <div class="card">
             <div class="image editable"><img src="{{ project.main_image }}" /></div>
             <div class="content editable">
@@ -145,7 +148,6 @@ portfolio:
                 <blockquote>&quot;{{ project.quote }}&quot;</blockquote>
             </div>
         </div>
-        
         {% endfor %}
 
         <a class="back"></a>
