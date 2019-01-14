@@ -132,11 +132,10 @@ portfolio:
             </div>
         </div>
         
+        <p>Hey</p>
         {% for project in portfolio %}
             <p>Hello {{ project | dump }}</p>
         {% endfor %}
-        
-        {% for project in site.portfolio %}
         
         <div class="card">
             <div class="image editable"><img src="{{ project.main_image }}" /></div>
