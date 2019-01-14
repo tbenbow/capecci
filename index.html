@@ -122,38 +122,20 @@ portfolio:
     <h1 class="editable">Works</h1>
     <p class="editable">Here’s a sampling of works performed for  fabulous clients and with talented partners.</p>
     <div class="portfolio repeatables"> <!-- Drawn with Slick -->
+
+        {% for project in portfolio %}
+        {% if project.publisted == true %}
         <div class="card">
-            <div class="image editable"><img src="./img/portfolio.jpg" /></div>
+            <div class="image editable"><img src="{{ project.main_image }}" /></div>
             <div class="content editable">
-                <h3>Walker Art Center</h3>
-                <p>Working with the Walker&#39;s development department and its education and community programs, I helped tell their donors&#39; stories, train sculpture garden guides and dream up taglines for events like their After Hours parties.</p>
-                <blockquote>&quot;You help us tell our story in fresh, engaging ways.&quot;</blockquote>
+                <h3>{{ project.name }}</h3>
+                <p>{{ project.content_html }}</p>
+                <blockquote>&quot;{{ project.quote }}&quot;</blockquote>
             </div>
         </div>
-        <div class="card">
-            <div class="image editable"><img src="./img/portfolio.jpg" /></div>
-            <div class="content editable">
-                <h3>Walker Art Center</h3>
-                <p>Working with the Walker&#39;s development department and its education and community programs, I helped tell their donors&#39; stories, train sculpture garden guides and dream up taglines for events like their After Hours parties.</p>
-                <blockquote>&quot;You help us tell our story in fresh, engaging ways.&quot;</blockquote>
-            </div>
-        </div>
-        <div class="card">
-            <div class="image editable"><img src="./img/portfolio.jpg" /></div>
-            <div class="content editable">
-                <h3>Walker Art Center</h3>
-                <p>Working with the Walker&#39;s development department and its education and community programs, I helped tell their donors&#39; stories, train sculpture garden guides and dream up taglines for events like their After Hours parties.</p>
-                <blockquote>&quot;You help us tell our story in fresh, engaging ways.&quot;</blockquote>
-            </div>
-        </div>
-        <div class="card">
-            <div class="image editable"><img src="./img/portfolio.jpg" /></div>
-            <div class="content editable">
-                <h3>Walker Art Center</h3>
-                <p>Working with the Walker&#39;s development department and its education and community programs, I helped tell their donors&#39; stories, train sculpture garden guides and dream up taglines for events like their After Hours parties.</p>
-                <blockquote>&quot;You help us tell our story in fresh, engaging ways.&quot;</blockquote>
-            </div>
-        </div>
+        {% endif %}
+        {% endfor %}
+
         <a class="back"></a>
         <a class="next"></a>
     </div>
